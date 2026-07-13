@@ -5,8 +5,32 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 | Was | Wo |
 |---|---|
 | 🛋️ **Azubi-Portal** (klickbarer Prototyp in BRAUN-CI) | [`index.html`](index.html) |
+| 📱 **Werbe-Creatives** (6 Social-Ads, fertige PNGs) | [`creatives/out/`](creatives/out) |
+| 🖼️ Creative-Übersicht (alle 6 auf einen Blick) | [`creatives/creatives-uebersicht.png`](creatives/creatives-uebersicht.png) |
 | 📄 **Pitch-PDF** (3 Seiten, LändleDigital-CI) | [`pitch/Azubi-Offensive-2027_BRAUN_x_LaendleDigital.pdf`](pitch/Azubi-Offensive-2027_BRAUN_x_LaendleDigital.pdf) |
 | 🖨️ Druckvorlage des Pitchs (HTML → PDF) | [`pitch/pitch.html`](pitch/pitch.html) |
+
+## Das „gewisse Etwas“ (v5)
+
+- **Live-Countdown** bis zum Ausbildungsstart 01.09.2027 (tickt sekündlich).
+- **Azubi-Testimonials** mit illustrierten Avataren (Beispiel-Stimmen*).
+- **Social-/Reel-Block**: zeigt die echten Kampagnen-Creatives in Handy-Rahmen – verbindet Ads & Portal sichtbar.
+- **Konfetti** beim Absenden der Bewerbung (perfekter Moment für die Live-Demo; respektiert `prefers-reduced-motion`).
+
+## Werbe-Creatives (zum Zuschicken)
+
+6 Beispiel-Ads in BRAUN-CI, exakte Ad-Maße, in `creatives/out/`:
+
+| Datei | Format | Angle |
+|---|---|---|
+| `creative-1-story-brand` | 1080×1920 | Slogan/Brand |
+| `creative-2-feed-angebot` | 1080×1080 | 34 Plätze / Angebot |
+| `creative-3-story-hook` | 1080×1920 | „Ohne Anschreiben“-Hook |
+| `creative-4-feed-testimonial` | 1080×1080 | Azubi-Zitat |
+| `creative-5-story-usp` | 1080×1920 | Antwort in 48 h |
+| `creative-6-feed-regional` | 1080×1080 | 9 Standorte |
+
+Neu bauen: `creatives/creatives.html` im Browser öffnen bzw. per Playwright je `.creative` als Element-Screenshot @2x exportieren.
 
 ## Im Meeting zeigen
 

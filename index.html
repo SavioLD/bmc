@@ -443,6 +443,53 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
 .final p{ color:rgba(255,255,255,.72); font-size:clamp(15px,1.4vw,18px); margin:16px auto 32px; max-width:52ch; position:relative; }
 .final .hero__cta{ position:relative; }
 
+/* ---- Testimonials ---- */
+.stimmen{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:clamp(30px,4vw,48px); }
+@media (max-width:900px){ .stimmen{ grid-template-columns:1fr; max-width:540px; margin-left:auto; margin-right:auto; } }
+.stimme{ background:#fff; border:1px solid var(--linie); border-radius:var(--r-lg); padding:24px 24px 22px; position:relative; overflow:hidden; transition:transform .16s ease, box-shadow .16s ease; }
+.stimme:hover{ transform:translateY(-4px); box-shadow:var(--sch-tief); }
+.stimme__mark{ position:absolute; top:-6px; right:16px; font-family:var(--f-logo); font-size:70px; color:var(--gelb); line-height:1; z-index:0; }
+.stimme p{ font-size:15.5px; color:var(--ink); font-weight:500; margin:8px 0 20px; position:relative; z-index:1; }
+.stimme__person{ display:flex; align-items:center; gap:12px; position:relative; z-index:1; }
+.stimme__avatar{ width:48px; height:48px; border-radius:50%; border:2px solid var(--ink); flex:none; }
+.stimme__person b{ font-size:14.5px; display:block; }
+.stimme__person span{ font-size:12.5px; color:var(--grau); }
+
+/* ---- Dark Section & heller Eyebrow ---- */
+.section--dark{ background:var(--ink); color:#fff; }
+.section--dark .h2{ color:#fff; }
+.section--dark .sub{ color:rgba(255,255,255,.72); }
+.eyebrow--hell{ background:var(--gelb); color:var(--ink); }
+
+/* ---- Social / Reels ---- */
+.social__grid{ display:grid; grid-template-columns:1fr auto; gap:clamp(30px,5vw,56px); align-items:center; }
+@media (max-width:860px){ .social__grid{ grid-template-columns:1fr; } }
+.social__grid .btn{ margin-top:6px; }
+.phones{ display:flex; gap:16px; justify-content:center; }
+.phone{ width:172px; flex:none; background:#000; border:6px solid #060606; border-radius:26px; overflow:hidden; box-shadow:0 22px 50px rgba(0,0,0,.5); position:relative; }
+.phone::before{ content:""; position:absolute; top:9px; left:50%; transform:translateX(-50%); width:44px; height:5px; background:#2A2A2A; border-radius:3px; z-index:2; }
+.phone img{ width:100%; display:block; }
+.phone:nth-child(2){ transform:translateY(-18px); }
+@media (max-width:860px){
+  .phone:nth-child(2){ transform:none; }
+  .phones{ overflow-x:auto; justify-content:flex-start; scrollbar-width:none; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); padding:4px 16px 10px; scroll-snap-type:x mandatory; }
+  .phones::-webkit-scrollbar{ display:none; }
+  .phone{ scroll-snap-align:center; }
+}
+
+/* ---- Countdown ---- */
+.countdown{ background:var(--gelb); color:var(--ink); text-align:center; }
+.countdown .sub{ margin-left:auto; margin-right:auto; }
+.countdown__uhr{ display:flex; gap:14px; justify-content:center; margin-top:clamp(22px,3vw,30px); flex-wrap:wrap; }
+.cd-tile{ background:var(--ink); color:#fff; border-radius:16px; padding:18px 12px; min-width:96px; box-shadow:0 6px 0 rgba(22,21,16,.35); }
+@media (max-width:420px){ .cd-tile{ min-width:70px; padding:14px 8px; } }
+.cd-tile b{ font-family:var(--f-logo); font-weight:400; font-size:clamp(28px,5vw,52px); display:block; line-height:1; color:#fff; font-variant-numeric:tabular-nums; }
+.cd-tile span{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gelb); margin-top:8px; display:block; }
+.countdown__foot{ margin-top:20px; font-size:12.5px; color:rgba(22,21,16,.62); }
+
+/* ---- Konfetti ---- */
+.konf{ position:fixed; top:-14px; width:10px; height:14px; z-index:70; pointer-events:none; border-radius:2px; }
+
 /* ---- Footer ---- */
 .fusz{ background:#131210; color:#B9B4AA; font-size:13.5px; }
 .fusz__grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:34px; padding:52px 0 40px; }
@@ -643,6 +690,36 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
         <path d="M80 80 v8 M92 80 v8" stroke="#161510" stroke-width="4" stroke-linecap="round"/>
       </g>
     </symbol>
+
+    <!-- Mini-Avatare für Testimonials -->
+    <symbol id="av-1" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="38" fill="#FFF3B3"/>
+      <path d="M14 76 v-6 a26 26 0 0 1 52 0 v6 Z" fill="#161510"/>
+      <rect x="32" y="54" width="16" height="12" rx="6" fill="#FFE500"/>
+      <circle cx="40" cy="35" r="15" fill="#C68642"/>
+      <path d="M25 35 a15 15 0 0 1 30 0 c0 -13 -30 -13 -30 0 Z" fill="#161510"/>
+      <circle cx="35" cy="36" r="1.9" fill="#161510"/><circle cx="45" cy="36" r="1.9" fill="#161510"/>
+      <path d="M35 42 q5 4 10 0" fill="none" stroke="#161510" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="av-2" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="38" fill="#FFF3B3"/>
+      <path d="M14 76 v-6 a26 26 0 0 1 52 0 v6 Z" fill="#161510"/>
+      <rect x="32" y="54" width="16" height="12" rx="6" fill="#FFE500"/>
+      <circle cx="40" cy="35" r="15" fill="#F1C27D"/>
+      <path d="M26 33 a14 14 0 0 1 28 0 c0 -9 -28 -9 -28 0 Z" fill="#5A3A1A"/>
+      <circle cx="35" cy="36" r="1.9" fill="#161510"/><circle cx="45" cy="36" r="1.9" fill="#161510"/>
+      <path d="M35 42 q5 4 10 0" fill="none" stroke="#161510" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="av-3" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="38" fill="#FFF3B3"/>
+      <path d="M14 76 v-6 a26 26 0 0 1 52 0 v6 Z" fill="#161510"/>
+      <rect x="32" y="54" width="16" height="12" rx="6" fill="#FFE500"/>
+      <circle cx="40" cy="35" r="15" fill="#8D5524"/>
+      <path d="M25 37 a15 15 0 0 1 30 0 c0 -14 -30 -14 -30 0 Z" fill="#161510"/>
+      <circle cx="57" cy="30" r="5" fill="#161510"/>
+      <circle cx="35" cy="36" r="1.9" fill="#161510"/><circle cx="45" cy="36" r="1.9" fill="#161510"/>
+      <path d="M35 42 q5 4 10 0" fill="none" stroke="#161510" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -837,6 +914,43 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="section section--sand" id="stimmen">
+    <div class="shell">
+      <div class="reveal">
+        <span class="eyebrow">Stimmen aus dem Team</span>
+        <h2 class="h2">Das sagen unsere <span class="mark">Azubis</span>.</h2>
+        <p class="sub">Keine Hochglanz-Sprüche – O-Töne aus dem Verkauf. (Beispiel-Stimmen für den Prototyp.*)</p>
+      </div>
+      <div class="stimmen">
+        <figure class="stimme reveal">
+          <span class="stimme__mark" aria-hidden="true">„</span>
+          <p>Ich dachte, Möbel = langweilig. Dann kam mein erster eigener Kunde – und das Gefühl, wenn die neue Küche steht.</p>
+          <figcaption class="stimme__person">
+            <svg class="stimme__avatar" viewBox="0 0 80 80" aria-hidden="true"><use href="#av-1"/></svg>
+            <span><b>Mia, 19</b><span>2. Lehrjahr · Einzelhandel</span></span>
+          </figcaption>
+        </figure>
+        <figure class="stimme reveal">
+          <span class="stimme__mark" aria-hidden="true">„</span>
+          <p>Ohne Anschreiben beworben, drei Tage später hatte ich mein Gespräch. So unkompliziert hätte ich das nie erwartet.</p>
+          <figcaption class="stimme__person">
+            <svg class="stimme__avatar" viewBox="0 0 80 80" aria-hidden="true"><use href="#av-2"/></svg>
+            <span><b>Jonas, 17</b><span>1. Lehrjahr · Einzelhandel</span></span>
+          </figcaption>
+        </figure>
+        <figure class="stimme reveal">
+          <span class="stimme__mark" aria-hidden="true">„</span>
+          <p>Mein Ausbilder kennt meinen Namen und meine Ziele. Hier bin ich kein anonymer Azubi in einem Riesenkonzern.</p>
+          <figcaption class="stimme__person">
+            <svg class="stimme__avatar" viewBox="0 0 80 80" aria-hidden="true"><use href="#av-3"/></svg>
+            <span><b>Aylin, 20</b><span>3. Lehrjahr · Einzelhandel</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- RAHMENDATEN -->
   <section class="section rahmen" id="rahmendaten">
     <div class="shell">
@@ -881,6 +995,25 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
             <a href="#bewerben" class="btn btn--ghost btn--sm">Praktikumsplatz anfragen</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL / REELS -->
+  <section class="section section--dark" id="social">
+    <div class="shell">
+      <div class="social__grid">
+        <div class="reveal">
+          <span class="eyebrow eyebrow--hell">So läuft die Kampagne</span>
+          <h2 class="h2">Du hast uns auf <span class="mark">TikTok</span><br />&amp; Insta gesehen?</h2>
+          <p class="sub">Genau so sprechen wir deinen Jahrgang an – kurz, ehrlich, mittendrin. Und jede Anzeige führt direkt hierher, auf dein Azubi-Portal.</p>
+          <a href="#bewerben" class="btn btn--gelb">Jetzt bewerben</a>
+        </div>
+        <div class="phones reveal" aria-label="Beispiel-Anzeigen der Kampagne">
+          <div class="phone"><img src="creatives/out/creative-1-story-brand.png" width="172" height="306" loading="lazy" alt="Anzeige: Richte dir deine Zukunft ein" /></div>
+          <div class="phone"><img src="creatives/out/creative-3-story-hook.png" width="172" height="306" loading="lazy" alt="Anzeige: 60 Sekunden, ohne Anschreiben" /></div>
+          <div class="phone"><img src="creatives/out/creative-5-story-usp.png" width="172" height="306" loading="lazy" alt="Anzeige: Antwort in 48 Stunden" /></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1021,6 +1154,21 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
           <span class="chip">Echte Übernahme-Perspektive</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="section countdown" id="countdown">
+    <div class="shell reveal">
+      <span class="eyebrow">Dein Countdown läuft</span>
+      <h2 class="h2">Noch bis zu deinem ersten Tag.</h2>
+      <div class="countdown__uhr" role="timer" aria-live="off">
+        <div class="cd-tile"><b id="cdTage">–</b><span>Tage</span></div>
+        <div class="cd-tile"><b id="cdStd">–</b><span>Stunden</span></div>
+        <div class="cd-tile"><b id="cdMin">–</b><span>Minuten</span></div>
+        <div class="cd-tile"><b id="cdSek">–</b><span>Sekunden</span></div>
+      </div>
+      <p class="countdown__foot">bis zum Ausbildungsstart am 01.09.2027 · und 2026 ist schon fast voll.</p>
     </div>
   </section>
 
@@ -1185,6 +1333,7 @@ document.getElementById("demoForm").addEventListener("submit", function(e){
       '<p>Deine Bewerbung ginge jetzt <strong>direkt an das Ausbildungsteam in ' + standort + '</strong>.<br>Innerhalb von 48 Stunden* bekommst du eine persönliche Rückmeldung.</p>' +
       '<span class="demo-hinweis">Demo · es wurden keine Daten übertragen</span>' +
     '</div>';
+  konfetti();
 });
 document.getElementById("waDemo").addEventListener("click", function(e){
   e.preventDefault();
@@ -1226,6 +1375,48 @@ var beobachter = new IntersectionObserver(function(eintraege){
 }, { threshold:.14 });
 document.querySelectorAll(".reveal").forEach(function(el){ beobachter.observe(el); });
 document.querySelectorAll(".stats [data-zahl]").forEach(zaehlen);
+
+/* ============ Countdown bis 01.09.2027 ============ */
+(function(){
+  var ziel = new Date(2027, 8, 1, 0, 0, 0); // Monat 8 = September
+  var elT = document.getElementById("cdTage"), elH = document.getElementById("cdStd"),
+      elM = document.getElementById("cdMin"), elS = document.getElementById("cdSek");
+  if(!elT) return;
+  function pad(n){ return (n < 10 ? "0" : "") + n; }
+  function tick(){
+    var diff = ziel - new Date();
+    if(diff < 0) diff = 0;
+    elT.textContent = Math.floor(diff / 86400000);
+    elH.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+    elM.textContent = pad(Math.floor(diff % 3600000 / 60000));
+    elS.textContent = pad(Math.floor(diff % 60000 / 1000));
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* ============ Konfetti (Bewerbung abgeschickt) ============ */
+function konfetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var farben = ["#FFE500", "#161510", "#FFFFFF", "#F0D800"];
+  var hoehe = innerHeight + 60;
+  for(var i = 0; i < 90; i++){
+    var s = document.createElement("span");
+    s.className = "konf";
+    s.style.left = (Math.random() * 100) + "vw";
+    s.style.background = farben[i % farben.length];
+    s.style.height = (10 + Math.random() * 8) + "px";
+    document.body.appendChild(s);
+    var dx = (Math.random() - 0.5) * 240;
+    var dreh = Math.random() * 720 - 360;
+    var anim = s.animate([
+      { transform: "translate(0,0) rotate(0deg)", opacity: 1 },
+      { transform: "translate(" + dx + "px," + hoehe + "px) rotate(" + dreh + "deg)", opacity: 1, offset: .92 },
+      { transform: "translate(" + dx + "px," + (hoehe + 40) + "px) rotate(" + dreh + "deg)", opacity: 0 }
+    ], { duration: 2400 + Math.random() * 1400, easing: "cubic-bezier(.2,.6,.4,1)" });
+    anim.onfinish = function(){ this.effect.target.remove(); };
+  }
+}
 </script>
 </body>
 </html>

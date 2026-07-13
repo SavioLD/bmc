@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>BRAUN Azubi-Kampagne · Creative-Entwürfe</title>
+<style>
+/* ============================================================
+   KAMPAGNEN-CREATIVES · BRAUN Möbel-Center Azubi 2027
+   erstellt von LändleDigital · Entwürfe für Social Ads
+   Rendern: jedes .creative wird per Element-Screenshot @2x
+   exportiert (Story 1080×1920 / Feed 1080×1080)
+   ============================================================ */
+@font-face { font-family:"Archivo Black"; font-weight:400; font-display:swap; src:url("../assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:600; font-display:swap; src:url("../assets/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:700; font-display:swap; src:url("../assets/fonts/poppins-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:800; font-display:swap; src:url("../assets/fonts/poppins-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:400; font-display:swap; src:url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:500; font-display:swap; src:url("../assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:600; font-display:swap; src:url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:700; font-display:swap; src:url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+
+:root{
+  --gelb:#FFE500; --gelb-tief:#F0D800; --ink:#161510; --creme:#FBFAF5; --sand:#F3EDDE;
+  --f-logo:"Archivo Black",sans-serif; --f-head:"Poppins",sans-serif; --f-body:"Inter",sans-serif;
+}
+*{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; padding:0; }
+body{ font-family:var(--f-body); background:#26251F; color:#fff; padding:40px; }
+.board__titel{ max-width:1200px; margin:0 auto 30px; }
+.board__titel h1{ font-family:var(--f-logo); font-size:34px; letter-spacing:-.01em; }
+.board__titel p{ color:#B9B4AA; margin-top:8px; font-size:15px; }
+.board{ display:flex; flex-wrap:wrap; gap:38px; align-items:flex-start; max-width:1200px; margin:0 auto; }
+.slot__label{ font-family:var(--f-head); font-weight:700; font-size:13px; color:#EDE9E0; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.slot__label b{ background:var(--gelb); color:var(--ink); padding:2px 8px; border-radius:5px; font-size:11px; letter-spacing:.04em; }
+
+/* ---- Creative-Grundlagen ---- */
+.creative{ position:relative; overflow:hidden; flex:none; }
+.creative--story{ width:540px; height:960px; border-radius:20px; }
+.creative--feed{ width:540px; height:540px; border-radius:20px; }
+.creative *{ line-height:1.02; }
+
+.c-logo{ height:44px; display:block; }
+.c-logo--chip{ background:#fff; padding:8px 14px; border-radius:12px; height:auto; }
+.c-logo--chip img{ height:34px; display:block; }
+.c-sticker{
+  font-family:var(--f-logo); font-size:17px; letter-spacing:.05em; display:inline-block;
+  background:var(--gelb); color:var(--ink); border:3px solid var(--ink); border-radius:999px;
+  padding:11px 22px; box-shadow:0 6px 0 var(--ink);
+}
+.c-sticker--dark{ background:var(--ink); color:var(--gelb); border-color:var(--gelb); box-shadow:0 6px 0 rgba(255,229,0,.3); }
+.c-cta{
+  display:inline-flex; align-items:center; gap:10px; font-family:var(--f-head); font-weight:800; font-size:22px;
+  background:var(--ink); color:#fff; border-radius:16px; padding:18px 30px;
+}
+.c-cta--gelb{ background:var(--gelb); color:var(--ink); border:3px solid var(--ink); }
+.c-url{ font-family:var(--f-head); font-weight:700; font-size:16px; letter-spacing:.02em; color:var(--ink); }
+.c-frame{ background:#fff; border:3px solid var(--ink); border-radius:18px; padding:12px; box-shadow:0 10px 0 var(--ink); }
+.c-frame svg{ width:100%; height:auto; display:block; border-radius:9px; }
+.hl-mark{ background:var(--gelb); color:var(--ink); padding:0 .12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.c-korn::after{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* ---------- C1 · STORY · Brand ---------- */
+#cr1{ background:var(--gelb); padding:44px 40px; display:flex; flex-direction:column; }
+#cr1 .c-kopf{ display:flex; justify-content:space-between; align-items:flex-start; }
+#cr1 .c-sticker{ transform:rotate(4deg); }
+#cr1 h2{ font-family:var(--f-logo); font-size:74px; letter-spacing:-.02em; color:var(--ink); margin-top:54px; }
+#cr1 .c-frame{ margin-top:auto; }
+#cr1 .c-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:34px; }
+
+/* ---------- C2 · FEED · Offer ---------- */
+#cr2{ background:var(--ink); padding:40px; display:flex; flex-direction:column; color:#fff; }
+#cr2 .c-eyebrow{ font-family:var(--f-head); font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:15px; color:var(--gelb); }
+#cr2 .c-big{ font-family:var(--f-logo); font-size:150px; color:var(--gelb); line-height:.9; margin:6px 0 2px; }
+#cr2 .c-sub{ font-family:var(--f-logo); font-size:30px; letter-spacing:-.01em; }
+#cr2 .c-meta{ margin-top:14px; font-size:15px; color:#CFCBC2; font-weight:500; }
+#cr2 .c-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+
+/* ---------- C3 · STORY · Hook ---------- */
+#cr3{ background:var(--creme); padding:44px 40px; display:flex; flex-direction:column; }
+#cr3 h2{ font-family:var(--f-head); font-weight:800; font-size:40px; color:var(--ink); margin-top:40px; letter-spacing:-.01em; }
+#cr3 .strike{ text-decoration:line-through; text-decoration-thickness:4px; text-decoration-color:#C4342B; color:#9A968C; }
+#cr3 .c-punch{ font-family:var(--f-logo); font-size:60px; margin-top:20px; color:var(--ink); letter-spacing:-.02em; }
+#cr3 .c-wa{ display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-family:var(--f-head); font-weight:700; font-size:18px; color:#128C7E; }
+#cr3 .c-wa svg{ width:26px; height:26px; }
+#cr3 .c-frame{ margin-top:auto; }
+#cr3 .c-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:30px; }
+
+/* ---------- C4 · FEED · Testimonial ---------- */
+#cr4{ background:var(--gelb); padding:40px; display:flex; flex-direction:column; }
+#cr4 .c-qmark{ font-family:var(--f-logo); font-size:96px; line-height:.42; color:var(--ink); display:block; }
+#cr4 .c-quote{ font-family:var(--f-head); font-weight:800; font-size:34px; color:var(--ink); letter-spacing:-.01em; margin-top:10px; }
+#cr4 .c-person{ display:flex; align-items:center; gap:14px; margin-top:26px; }
+#cr4 .c-person b{ font-family:var(--f-head); font-weight:700; font-size:17px; display:block; color:var(--ink); }
+#cr4 .c-person span{ font-size:14px; color:#5E5B52; }
+#cr4 .avatar{ width:66px; height:66px; border-radius:50%; border:3px solid var(--ink); background:#fff; flex:none; }
+#cr4 .c-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+
+/* ---------- C5 · STORY · USP Speed ---------- */
+#cr5{ background:var(--ink); padding:44px 40px; display:flex; flex-direction:column; color:#fff; text-align:center; align-items:center; }
+#cr5 .c5-mid{ margin:auto 0; position:relative; z-index:1; }
+#cr5 .c5-ring{ position:absolute; top:47%; left:50%; width:410px; height:410px; transform:translate(-50%,-50%); border:3px dashed rgba(255,229,0,.22); border-radius:50%; z-index:0; }
+#cr5 .c5-ring::before{ content:""; position:absolute; top:50%; left:50%; width:300px; height:300px; transform:translate(-50%,-50%); border:2px solid rgba(255,229,0,.1); border-radius:50%; }
+#cr5 .c-eyebrow{ font-family:var(--f-head); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:17px; color:#CFCBC2; }
+#cr5 .c-big{ font-family:var(--f-logo); font-size:210px; color:var(--gelb); line-height:.86; margin:8px 0; }
+#cr5 .c-punch{ font-family:var(--f-head); font-weight:800; font-size:34px; }
+#cr5 .c-punch small{ display:block; font-weight:600; font-size:18px; color:#CFCBC2; margin-top:10px; max-width:340px; margin-left:auto; margin-right:auto; }
+#cr5 .c-foot{ display:flex; flex-direction:column; align-items:center; gap:16px; }
+
+/* ---------- C6 · FEED · Regional ---------- */
+#cr6{ background:var(--creme); padding:40px; display:flex; flex-direction:column; }
+#cr6 h2{ font-family:var(--f-logo); font-size:44px; color:var(--ink); letter-spacing:-.02em; }
+#cr6 h2 span{ background:var(--gelb); padding:0 .1em; }
+#cr6 .c-orte{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+#cr6 .c-ort{ font-family:var(--f-head); font-weight:700; font-size:14px; background:#fff; border:2px solid var(--ink); border-radius:999px; padding:7px 13px; }
+#cr6 .c-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+</style>
+</head>
+<body>
+
+<!-- Illustrations-Sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="bg-panel"><rect x="0" y="0" width="160" height="110" fill="#F3EDDE"/><circle cx="128" cy="18" r="26" fill="#FFF3B3" opacity=".8"/></g>
+  <symbol id="s-verkauf" viewBox="0 0 160 110">
+    <use href="#bg-panel"/><rect x="10" y="88" width="140" height="3" rx="1.5" fill="#161510" opacity=".18"/>
+    <g stroke="#161510" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="16" y="48" width="66" height="20" rx="7" fill="#FFE500"/><rect x="20" y="62" width="58" height="20" rx="7" fill="#FFE500"/>
+      <rect x="12" y="58" width="12" height="24" rx="5" fill="#FFF6C9"/><rect x="74" y="58" width="12" height="24" rx="5" fill="#FFF6C9"/>
+      <path d="M22 84 v6 M76 84 v6" fill="none"/><path d="M120 34 v46" fill="none"/><path d="M106 34 h28 l-5 -14 h-18 Z" fill="#161510"/></g>
+    <g><circle cx="52" cy="42" r="9" fill="#C68642" stroke="#161510" stroke-width="2.6"/>
+      <path d="M43 40 a9 9 0 0 1 12 -6 l3 4" fill="none" stroke="#161510" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="49.5" cy="42" r="1.3" fill="#161510"/><circle cx="55" cy="42" r="1.3" fill="#161510"/>
+      <path d="M50 46 q2.5 2 5 0" fill="none" stroke="#161510" stroke-width="1.8" stroke-linecap="round"/></g>
+    <path d="M94 42 c0 -8 8 -12 12 -6 c4 -6 12 -2 12 6 c0 7 -12 13 -12 13 s-12 -6 -12 -13 Z" fill="#FFE500" stroke="#161510" stroke-width="2.6" stroke-linejoin="round" transform="rotate(-8 106 45)"/>
+  </symbol>
+  <symbol id="s-schnuppern" viewBox="0 0 160 110">
+    <use href="#bg-panel"/><rect x="10" y="88" width="140" height="3" rx="1.5" fill="#161510" opacity=".18"/>
+    <g stroke="#161510" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 88 v-62 h34 v62" fill="none"/><path d="M54 26 l16 8 v54" fill="none"/><path d="M54 26 v62 l16 0" fill="#FFF6C9"/>
+      <rect x="96" y="60" width="44" height="14" rx="6" fill="#FFE500"/><rect x="100" y="50" width="36" height="14" rx="6" fill="#FFE500"/><path d="M100 74 v8 M136 74 v8" fill="none"/></g>
+    <g><circle cx="82" cy="40" r="10" fill="#C68642" stroke="#161510" stroke-width="2.6"/>
+      <path d="M72 38 a10 10 0 0 1 14 -7" fill="none" stroke="#161510" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="79" cy="40" r="1.4" fill="#161510"/><circle cx="85.5" cy="40" r="1.4" fill="#161510"/>
+      <path d="M80 45 q2.5 2.5 5.5 0" fill="none" stroke="#161510" stroke-width="1.8" stroke-linecap="round"/>
+      <rect x="70" y="52" width="24" height="28" rx="9" fill="#161510"/><rect x="76" y="56" width="12" height="7" rx="3.5" fill="#FFE500"/>
+      <path d="M94 56 l10 -10" stroke="#161510" stroke-width="4" stroke-linecap="round"/><path d="M76 80 v8 M88 80 v8" stroke="#161510" stroke-width="4" stroke-linecap="round"/></g>
+    <g stroke="#161510" stroke-width="2.2" stroke-linejoin="round"><rect x="106" y="18" width="34" height="18" rx="9" fill="#fff"/><path d="M114 36 l-2 6 8 -6" fill="#fff"/></g>
+    <text x="123" y="31" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="10" fill="#161510">HI!</text>
+  </symbol>
+  <symbol id="s-avatar" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="38" fill="#FFF3B3"/>
+    <circle cx="40" cy="33" r="15" fill="#C68642" stroke="#161510" stroke-width="3"/>
+    <path d="M25 30 a15 15 0 0 1 22 -9 l4 6" fill="none" stroke="#161510" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="35" cy="33" r="2" fill="#161510"/><circle cx="45" cy="33" r="2" fill="#161510"/>
+    <path d="M35 40 q5 4 10 0" fill="none" stroke="#161510" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M16 74 v-6 a24 24 0 0 1 48 0 v6 Z" fill="#161510"/>
+    <rect x="31" y="52" width="18" height="10" rx="5" fill="#FFE500"/>
+  </symbol>
+</defs></svg>
+
+<div class="board__titel">
+  <h1>BRAUN Azubi-Kampagne 2027 · Creative-Entwürfe</h1>
+  <p>Beispiel-Ads für Instagram, TikTok, Snapchat &amp; Meta – alle führen aufs Azubi-Portal. Konzept von LändleDigital · Fotos &amp; Logo final in Abstimmung.</p>
+</div>
+
+<div class="board">
+
+  <!-- C1 -->
+  <div class="slot">
+    <div class="slot__label">Story / Reel · Brand <b>1080×1920</b></div>
+    <div class="creative creative--story c-korn" id="cr1">
+      <div class="c-kopf">
+        <img class="c-logo" src="../assets/img/braun-logo.png" alt="BRAUN" />
+        <span class="c-sticker">AUSBILDUNG 2027</span>
+      </div>
+      <h2>RICHTE DIR DEINE ZUKUNFT EIN.</h2>
+      <div class="c-frame"><svg viewBox="0 0 160 110"><use href="#s-verkauf"/></svg></div>
+      <div class="c-foot">
+        <span class="c-cta">Jetzt bewerben →</span>
+        <span class="c-url">azubis.<br/>braun-moebel.de</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- C2 -->
+  <div class="slot">
+    <div class="slot__label">Feed · Angebot <b>1080×1080</b></div>
+    <div class="creative creative--feed c-korn" id="cr2">
+      <div class="c-eyebrow">Ausbildung · Start 09/2027</div>
+      <div class="c-big">34</div>
+      <div class="c-sub">Azubi-Plätze im<br/>Einzelhandel.</div>
+      <div class="c-meta">Bis zu 34 Plätze · 9 Standorte im Südwesten · ohne Anschreiben</div>
+      <div class="c-foot">
+        <span class="c-logo--chip"><img src="../assets/img/braun-logo.png" alt="BRAUN" /></span>
+        <span class="c-cta c-cta--gelb">Bewirb dich →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- C3 -->
+  <div class="slot">
+    <div class="slot__label">Story / Reel · Hook <b>1080×1920</b></div>
+    <div class="creative creative--story c-korn" id="cr3">
+      <div class="c-kopf"><img class="c-logo" src="../assets/img/braun-logo.png" alt="BRAUN" /></div>
+      <h2>Kein Bock auf <span class="strike">5 Seiten</span> Bewerbung?</h2>
+      <div class="c-punch"><span class="hl-mark">60 Sekunden.</span><br/>Ohne Anschreiben.</div>
+      <div class="c-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.1 14.1c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3Z"/></svg>
+        … oder einfach per WhatsApp
+      </div>
+      <div class="c-frame"><svg viewBox="0 0 160 110"><use href="#s-schnuppern"/></svg></div>
+      <div class="c-foot">
+        <span class="c-cta">Jetzt bewerben →</span>
+        <span class="c-url">azubis.<br/>braun-moebel.de</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- C4 -->
+  <div class="slot">
+    <div class="slot__label">Feed · Testimonial <b>1080×1080</b></div>
+    <div class="creative creative--feed c-korn" id="cr4">
+      <span class="c-qmark" aria-hidden="true">„</span>
+      <div class="c-quote">Ich dachte, Möbel = langweilig. Dann kam mein erster eigener Kunde.“</div>
+      <div class="c-person">
+        <svg class="avatar" viewBox="0 0 80 80"><use href="#s-avatar"/></svg>
+        <div><b>Mia, 19</b><span>2. Lehrjahr · Einzelhandel*</span></div>
+      </div>
+      <div class="c-foot">
+        <span class="c-logo--chip"><img src="../assets/img/braun-logo.png" alt="BRAUN" /></span>
+        <span class="c-cta c-cta--gelb">Dein Start →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- C5 -->
+  <div class="slot">
+    <div class="slot__label">Story / Reel · USP <b>1080×1920</b></div>
+    <div class="creative creative--story c-korn" id="cr5">
+      <span class="c-logo--chip"><img src="../assets/img/braun-logo.png" alt="BRAUN" /></span>
+      <div class="c5-ring" aria-hidden="true"></div>
+      <div class="c5-mid">
+        <div class="c-eyebrow">Deine Antwort kommt in</div>
+        <div class="c-big">48H</div>
+        <div class="c-punch">Kein Ghosting.<small>Dein Standort-Team meldet sich persönlich – per WhatsApp, Anruf oder Mail.</small></div>
+      </div>
+      <div class="c-foot">
+        <span class="c-sticker c-sticker--dark">AUSBILDUNG 2027</span>
+        <span class="c-cta c-cta--gelb">Jetzt bewerben →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- C6 -->
+  <div class="slot">
+    <div class="slot__label">Feed · Regional <b>1080×1080</b></div>
+    <div class="creative creative--feed c-korn" id="cr6">
+      <div class="c-kopf"><img class="c-logo" src="../assets/img/braun-logo.png" alt="BRAUN" /></div>
+      <h2 style="margin-top:22px">Deine Ausbildung <span>in deiner Nähe</span>.</h2>
+      <div class="c-orte">
+        <span class="c-ort">Reutlingen</span><span class="c-ort">Freiburg</span><span class="c-ort">Offenburg</span>
+        <span class="c-ort">Singen</span><span class="c-ort">Konstanz</span><span class="c-ort">Bad Dürrheim</span>
+        <span class="c-ort">Bad Saulgau</span><span class="c-ort">Freudenstadt</span><span class="c-ort">Homburg</span>
+      </div>
+      <div class="c-foot">
+        <span style="font-family:var(--f-logo);font-size:22px;color:var(--ink)">9× im Südwesten</span>
+        <span class="c-cta c-cta--gelb">Bewirb dich →</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

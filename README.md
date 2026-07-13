@@ -13,7 +13,7 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 
 ## Das „gewisse Etwas“
 
-- **Azubi-Check** (Mini-Quiz, Sektion `#check`): 5 Rechen-Fragen aus dem Verkaufsalltag (Rabatt, Rückgeld, Dreisatz) **vor** der Bewerbung. Das Ergebnis (z. B. „4/5“) wird an die Bewerbung angehängt → **Vorqualifizierung** direkt im Funnel, ohne jemanden hart abzuweisen. Genau der Hebel gegen „viele Bewerbungen, aber schwache Mathe-Kenntnisse“.
+- **Azubi-Check – die Verkaufs-Challenge** (Sektion `#check`): 6 anspruchsvolle Rechen-Aufgaben aus dem Verkaufsalltag (Mehrfach-Rabatt, MwSt/Netto, Anzahlung + Raten, Dreisatz) mit **Countdown pro Frage, Punkten fürs Tempo und Combo-Bonus** im Game-Look. Ergebnis = Punktzahl + Rang + „X/6 richtig“, wird an die Bewerbung angehängt → **echte Vorqualifizierung** im Funnel, ohne jemanden hart abzuweisen. Der Hebel gegen „viele Bewerbungen, aber schwache Mathe-Kenntnisse“ (anspruchsvoll genug, um wirklich zu filtern).
 - **Live-Countdown** bis zum Ausbildungsstart 01.09.2027 (tickt sekündlich).
 - **Azubi-Testimonials** mit illustrierten Avataren (Beispiel-Stimmen*).
 - **Social-/Reel-Block**: zeigt die echten Kampagnen-Creatives in Handy-Rahmen – verbindet Ads & Portal sichtbar.

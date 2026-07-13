@@ -17,9 +17,11 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 
 ## Datenstand (aus Braun-Rückmeldung, Juli 2026)
 
+- **Nur eine Ausbildung** wird beworben: **Kaufmann/-frau im Einzelhandel** (Start 01.09.2027). Keine weiteren Stellen im Portal.
 - **9 Standorte** suchen aktiv: 5 Häuser à 1–2 Plätze, 4 Häuser à 4–6 Plätze → **bis zu 34** für Start **09/2027** (2026 nahezu voll).
-- Einzige harte Anforderung: **keine 5 in Mathe** – Rest entscheidet das persönliche Gespräch (so auch im Portal-FAQ & in den „harten Fakten“).
-- CI: **Gelb/Schwarz** nach Website & Logo (schwarzes BRAUN mit gelber Kontur + BMC-Badge, als SVG nachgebaut). Zentrale = **Reutlingen**.
+- Einzige harte Anforderung: **keine 5 in Mathe** – Rest entscheidet das persönliche Gespräch (nur noch im FAQ, nicht mehr als Slogan/Kachel).
+- Slogan im Mittelpunkt: **„Richte dir deine Zukunft ein.“**
+- CI: **Gelb/Schwarz** nach Website & Logo. Zentrale = **Reutlingen**.
 
 ## Platzhalter (vor Kampagnenstart ersetzen)
 

@@ -24,7 +24,7 @@
   --gelb:#FFDE59; --gelb-tief:#F5C518; --gelb-soft:#FFF1B8;
   --ink:#111111; --ink-soft:#2B2B2B; --mute:#6E6A60;
   --linie:#E7E2D6; --papier:#F6F2E7; --papier-2:#FFFCF4; --weiss:#fff;
-  --braun-rot:#E2001A;
+  --braun-gelb:#FFE500; --braun-ink:#161510;
   --pop:0 6px 0 #111111; --pop-sm:0 4px 0 #111111;
   --f-display:"Archivo Black", sans-serif;
   --f-head:"Bricolage Grotesque", sans-serif;
@@ -64,7 +64,7 @@ img{ display:block; }
   box-shadow:var(--pop-sm); white-space:nowrap;
 }
 .chip--gelb{ background:var(--gelb); }
-.chip--rot{ background:var(--braun-rot); color:#fff; }
+.chip--braun{ background:var(--braun-ink); color:var(--braun-gelb); }
 .fuss{
   position:absolute; left:15mm; right:15mm; bottom:7mm; display:flex; justify-content:space-between;
   align-items:center; border-top:1.5px solid var(--linie); padding-top:3mm;
@@ -121,7 +121,7 @@ img{ display:block; }
 }
 .funnel__portal img{ width:31mm; border-radius:3mm; border:1.5px solid var(--linie); }
 .funnel__portal .info{ max-width:52mm; }
-.funnel__portal .info .mono{ color:var(--braun-rot); }
+.funnel__portal .info .mono{ color:var(--braun-ink); background:var(--braun-gelb); padding:0 1mm; }
 .funnel__portal .info h3{ font-family:var(--f-head); font-weight:800; font-size:11.5pt; margin:1.5mm 0; line-height:1.15; }
 .funnel__portal .info p{ margin:0; font-size:8.4pt; color:var(--ink-soft); line-height:1.4; }
 .funnel__orte{ display:flex; flex-wrap:wrap; gap:2mm; justify-content:center; max-width:135mm; }
@@ -192,7 +192,7 @@ img{ display:block; }
     <span class="eyebrow"><span class="dash"></span> Einstellungspartner-Konzept für BRAUN Möbel-Center</span>
     <h1>Die <span class="hl">Azubi-Offensive</span><br />2027.</h1>
     <p class="cover__lead">
-      <b>30–40 Ausbildungsplätze. Ein Portal. Eine Kampagne.</b><br />
+      <b>Bis zu 34 Ausbildungsplätze. Ein Portal. Eine Kampagne.</b><br />
       Wie BRAUN Möbel-Center zur ersten Adresse für Azubis im Südwesten wird –
       messbar, planbar und in echtem BRAUN-Look.
     </p>
@@ -202,16 +202,23 @@ img{ display:block; }
   <div class="cover__partner">
     <span class="mono">vorbereitet für</span>
     <span class="braunlogo">
-      <span class="braunlogo__box">BRAUN</span>
-      <span class="braunlogo__text"><b>Möbel-Center</b><span>10 Standorte im Südwesten</span></span>
+      <svg width="170" viewBox="0 0 302 64" role="img" aria-label="BRAUN Möbel-Center">
+        <text x="2" y="51" font-family="Archivo Black, sans-serif" font-size="52" letter-spacing="-2" fill="#161510" stroke="#FFE500" stroke-width="7" paint-order="stroke" stroke-linejoin="round">BRAUN</text>
+        <g>
+          <rect x="222" y="5" width="76" height="54" rx="11" fill="#161510" stroke="#FFE500" stroke-width="3"/>
+          <text x="260" y="23" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="12.5" fill="#FFE500">BRAUN</text>
+          <text x="260" y="37.5" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="12.5" fill="#FFE500">MÖBEL</text>
+          <text x="260" y="52" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="12.5" fill="#FFE500">CENTER</text>
+        </g>
+      </svg>
     </span>
   </div>
 
   <div class="cover__chips">
     <span class="chip chip--gelb">Ausbildungsstart 01.09.2027</span>
     <span class="chip">Zielgruppe 14–20 Jahre</span>
-    <span class="chip">9 Häuser + Zentrale</span>
-    <span class="chip chip--rot">Portal in BRAUN-CI inklusive</span>
+    <span class="chip">9 Standorte suchen aktiv</span>
+    <span class="chip chip--braun">Portal in BRAUN-CI inklusive</span>
   </div>
 
   <div class="fuss">
@@ -225,7 +232,7 @@ img{ display:block; }
   <div class="s2__kopf">
     <span class="eyebrow"><span class="dash"></span> Das Prinzip</span>
     <h2>Alle Wege führen ins <span class="hl">Azubi-Portal</span>.</h2>
-    <p>Statt 10 einzelner Stellenanzeigen: eine zentrale Plattform, auf der jede Kampagne landet – und die Bewerbungen automatisch an die Standorte verteilt.</p>
+    <p>Statt 9 einzelner Stellenanzeigen: eine zentrale Plattform, auf der jede Kampagne landet – und die Bewerbungen automatisch an die Standorte verteilt.</p>
   </div>
 
   <div class="s2__grid">
@@ -279,19 +286,19 @@ img{ display:block; }
         <span>REUTLINGEN</span><span>FREIBURG</span><span>OFFENBURG</span><span>SINGEN</span><span>KONSTANZ</span>
         <span>BAD DÜRRHEIM</span><span>BAD SAULGAU</span><span>FREUDENSTADT</span><span>HOMBURG</span><span>ZENTRALE</span>
       </div>
-      <span class="funnel__label">Bewerbungen fließen direkt an die 10 Standorte – ohne Umweg über Sammel-Postfächer.</span>
+      <span class="funnel__label">Bewerbungen fließen direkt an die 9 suchenden Standorte + Zentrale – ohne Sammel-Postfach.</span>
     </div>
   </div>
 
   <div class="s2__kpi">
-    <div class="kpi kpi--gelb"><b>30–40</b><span>unterschriebene Ausbildungsverträge zum 01.09.2027 – das Ziel, an dem wir uns messen lassen</span></div>
+    <div class="kpi kpi--gelb"><b>bis zu 34</b><span>Ausbildungsverträge zum 01.09.2027 – 5 Häuser à 1–2, 4 Häuser à 4–6 Plätze</span></div>
     <div class="kpi"><b>500+</b><span>qualifizierte Bewerbungen über das Portal*</span></div>
     <div class="kpi"><b>48 h</b><span>bis zur persönlichen Rückmeldung an jeden Bewerber</span></div>
     <div class="kpi"><b>100 %</b><span>Transparenz: Report pro Kanal, Beruf &amp; Standort</span></div>
   </div>
 
   <div class="fuss">
-    <span class="mono">* Richtwert – final gemeinsam im Kickoff festgelegt</span>
+    <span class="mono">* Richtwert, final im Kickoff · O-Ton BRAUN: 2026 ist nahezu voll – volle Power auf Jahrgang 2027</span>
     <span class="seitenzahl">02 / 03</span>
   </div>
 </section>
@@ -332,7 +339,7 @@ img{ display:block; }
         <div class="etappe"><span class="mono">08/2026</span><p><b>Portal-Umsetzung</b> + Tracking, Domain azubis.braun-moebel.de</p></div>
         <div class="etappe"><span class="mono">09/2026</span><p><b>Livegang &amp; Ads-Start</b> – pünktlich zur Bewerbungssaison 2027</p></div>
         <div class="etappe"><span class="mono">bis 06/27</span><p><b>Always-on-Kampagne,</b> monatliches Reporting &amp; Optimierung</p></div>
-        <div class="etappe"><span class="mono">01.09.27</span><p><b>30–40 neue Azubis</b> starten bei BRAUN 🎉</p></div>
+        <div class="etappe"><span class="mono">01.09.27</span><p><b>Bis zu 34 neue Azubis</b> starten bei BRAUN 🎉</p></div>
       </div>
 
       <div class="kontakt">

@@ -15,11 +15,17 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 - **Live-Link:** In den Repo-Settings **GitHub Pages** (Branch `main`) aktivieren → Portal ist unter `https://saviold.github.io/bmc/` abrufbar, z. B. fürs iPad.
 - **PDF:** liegt fertig gerendert im `pitch/`-Ordner.
 
+## Datenstand (aus Braun-Rückmeldung, Juli 2026)
+
+- **9 Standorte** suchen aktiv: 5 Häuser à 1–2 Plätze, 4 Häuser à 4–6 Plätze → **bis zu 34** für Start **09/2027** (2026 nahezu voll).
+- Einzige harte Anforderung: **keine 5 in Mathe** – Rest entscheidet das persönliche Gespräch (so auch im Portal-FAQ & in den „harten Fakten“).
+- CI: **Gelb/Schwarz** nach Website & Logo (schwarzes BRAUN mit gelber Kontur + BMC-Badge, als SVG nachgebaut). Zentrale = **Reutlingen**.
+
 ## Platzhalter (vor Kampagnenstart ersetzen)
 
-- **Logo & Rot-Ton:** CI-Nachbau. Zentral tauschbar über die CSS-Tokens oben in `index.html` (`--rot`, `.logo`).
+- **Logo & Gelb-Ton:** CI-Nachbau. Zentral tauschbar über die CSS-Tokens oben in `index.html` (`--gelb`, `--ink`) und die `logo__mark`-SVGs → gegen echte Logo-Datei tauschen.
 - **Fotos:** beige Platzhalter-Flächen (mit „Platzhalter“-Tag) → echte Azubi-Fotos/Videos.
-- **Alle Werte mit `*`:** Vergütung, Urlaub, Platzzahlen pro Standort, 48-h-Versprechen → mit BRAUN final abstimmen.
+- **Alle Werte mit `*`:** Vergütung, 48-h-Versprechen, Zuordnung welcher Standort 1–2 bzw. 4–6 Plätze hat → mit BRAUN final abstimmen.
 - **Daten pflegen:** Standorte & Berufe liegen als JS-Arrays (`STANDORTE`, `BERUFE`) unten in `index.html`.
 
 ## PDF neu bauen

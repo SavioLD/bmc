@@ -65,6 +65,7 @@ button{ font:inherit; cursor:pointer; }
 ul{ margin:0; padding:0; list-style:none; }
 p{ margin:0 0 1em; }
 h1,h2,h3,h4{ margin:0; line-height:1.08; font-family:var(--f-head); }
+[hidden]{ display:none !important; }
 :focus-visible{ outline:3px solid var(--ink); outline-offset:2px; border-radius:4px; }
 
 .shell{ width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(16px,4vw,40px); }
@@ -129,7 +130,7 @@ h1,h2,h3,h4{ margin:0; line-height:1.08; font-family:var(--f-head); }
 .burger{ display:none; background:none; border:0; width:44px; height:44px; flex-direction:column; gap:5px; align-items:center; justify-content:center; margin-left:auto; }
 .burger span{ width:24px; height:2.5px; background:var(--ink); border-radius:2px; transition:.2s; }
 .topbar__mobile{ display:none; }
-@media (max-width:940px){
+@media (max-width:1040px){
   .topbar__nav, .topbar__cta{ display:none; }
   .burger{ display:flex; }
   .topbar__mobile{ position:absolute; top:74px; left:0; right:0; background:#fff; border-bottom:1px solid var(--linie); padding:10px 0 16px; box-shadow:0 18px 30px rgba(22,21,16,.12); }
@@ -416,6 +417,40 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
 .form-erfolg h3{ margin-bottom:8px; }
 .form-erfolg p{ font-size:14.5px; color:var(--grau); }
 .form-erfolg .demo-hinweis{ display:inline-block; margin-top:14px; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); background:var(--gelb); padding:6px 12px; border-radius:999px; }
+
+/* ---- Azubi-Check (Quiz) ---- */
+.quiz{ max-width:660px; margin:clamp(30px,4vw,44px) auto 0; background:#fff; border:2px solid var(--ink); border-radius:var(--r-lg); box-shadow:0 8px 0 var(--ink); padding:clamp(24px,3.4vw,38px); }
+.quiz__start{ text-align:center; }
+.quiz__ikon{ font-size:46px; line-height:1; }
+.quiz h3{ font-size:22px; font-weight:800; margin:12px 0 8px; letter-spacing:-.01em; }
+.quiz__start p{ color:var(--grau); max-width:42ch; margin:0 auto 22px; font-size:15px; }
+.quiz__leiste{ height:8px; background:var(--sand); border-radius:999px; overflow:hidden; }
+.quiz__fortschritt{ display:block; height:100%; width:0; background:var(--gelb); transition:width .35s ease; }
+.quiz__meta{ display:flex; justify-content:space-between; font-size:12.5px; font-weight:700; color:var(--grau); margin:12px 0 4px; letter-spacing:.02em; }
+.quiz__frage{ font-size:clamp(18px,2vw,21px); font-weight:800; margin:6px 0 20px; letter-spacing:-.01em; }
+.quiz__antworten{ display:grid; gap:11px; }
+.quiz__antworten button{ text-align:left; padding:14px 16px; border:2px solid var(--linie); border-radius:12px; background:var(--creme); font:inherit; font-size:15px; font-weight:600; transition:transform .1s ease, border-color .12s ease, background .12s ease; display:flex; align-items:center; gap:12px; }
+.quiz__antworten button::before{ content:attr(data-buchstabe); width:28px; height:28px; flex:none; border-radius:8px; background:#fff; border:2px solid var(--ink); display:grid; place-items:center; font-family:var(--f-head); font-weight:800; font-size:13px; }
+.quiz__antworten button:hover:not(:disabled){ border-color:var(--ink); transform:translateY(-1px); }
+.quiz__antworten button.richtig{ background:#DFF3E4; border-color:#1F9D57; }
+.quiz__antworten button.richtig::before{ background:#1F9D57; color:#fff; border-color:#1F9D57; content:"✓"; }
+.quiz__antworten button.falsch{ background:#FBE3E0; border-color:#C4342B; }
+.quiz__antworten button.falsch::before{ background:#C4342B; color:#fff; border-color:#C4342B; content:"✕"; }
+.quiz__antworten button:disabled{ cursor:default; }
+.quiz__feedback{ font-size:13.5px; color:var(--grau); margin:16px 2px 0; min-height:20px; font-weight:500; }
+.quiz__feedback b{ color:var(--ink); }
+.quiz__ergebnis{ text-align:center; }
+.quiz__badge{ width:88px; height:88px; margin:0 auto 16px; border-radius:50%; background:var(--gelb); border:3px solid var(--ink); display:grid; place-items:center; font-family:var(--f-logo); font-size:27px; box-shadow:0 5px 0 var(--ink); }
+.quiz__ergebnis h3{ font-size:24px; }
+.quiz__ergebnis p{ color:var(--grau); max-width:46ch; margin:8px auto 22px; font-size:15px; }
+.quiz__erg-cta{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.quiz__hinweis{ margin-top:18px; font-size:12px; color:var(--grau); text-align:center; }
+
+.check-nudge{ display:flex; align-items:center; gap:10px; background:var(--gelb-wash); border:1.5px dashed var(--gelb-tief); border-radius:12px; padding:11px 14px; font-size:13px; font-weight:500; color:var(--ink); margin-bottom:18px; }
+.check-nudge a{ font-weight:700; text-decoration:underline; white-space:nowrap; }
+.check-badge{ display:flex; align-items:center; gap:8px; background:#DFF3E4; border:1.5px solid #1F9D57; color:#14663B; border-radius:12px; padding:11px 14px; font-size:13px; font-weight:500; margin-bottom:18px; }
+.check-badge b{ font-family:var(--f-head); font-weight:700; }
+.check-badge .kx{ margin-left:auto; font-family:var(--f-logo); font-size:17px; color:#1F9D57; }
 
 /* ---- FAQ & Eltern ---- */
 .faq{ max-width:760px; margin:clamp(28px,4vw,42px) auto 0; }
@@ -751,6 +786,7 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
       <a href="#warum">Warum BRAUN</a>
       <a href="#standorte">Standorte</a>
       <a href="#probewoche">Probewoche</a>
+      <a href="#check">Azubi-Check</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a href="#bewerben" class="btn btn--gelb btn--sm topbar__cta">Jetzt bewerben</a>
@@ -761,6 +797,7 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
     <a href="#warum">Warum BRAUN</a>
     <a href="#standorte">Standorte</a>
     <a href="#probewoche">Probewoche</a>
+    <a href="#check">Azubi-Check</a>
     <a href="#faq">FAQ</a>
     <a href="#bewerben"><strong style="background:var(--gelb);padding:2px 8px">Jetzt bewerben →</strong></a>
   </div>
@@ -1036,6 +1073,45 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
     </div>
   </section>
 
+  <!-- AZUBI-CHECK (Mini-Quiz) -->
+  <section class="section" id="check">
+    <div class="shell">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Azubi-Check · dauert 60 Sek.</span>
+        <h2 class="h2">Bist du <span class="mark">BRAUN-Azubi-Material</span>?</h2>
+        <p class="sub" style="margin-left:auto;margin-right:auto">Kleiner Rechen-Check aus dem echten Verkaufsalltag – kein Abi-Stoff, nur die Basics, die du an Kasse und Beratung brauchst. Dein Ergebnis geht mit deiner Bewerbung ans Team und hilft, dich richtig einzuschätzen.</p>
+      </div>
+
+      <div class="quiz reveal" id="quiz">
+        <div class="quiz__start" id="quizStart">
+          <div class="quiz__ikon" aria-hidden="true">🧮</div>
+          <h3>5 kurze Fragen. Los geht’s.</h3>
+          <p>Prozente, Rückgeld, Dreisatz – rechne, als stündest du gerade mit einer Kundin vor dem Sofa.</p>
+          <button class="btn btn--gelb" id="quizGo">Check starten</button>
+        </div>
+
+        <div class="quiz__buehne" id="quizBuehne" hidden>
+          <div class="quiz__leiste"><span class="quiz__fortschritt" id="quizBar"></span></div>
+          <div class="quiz__meta"><span id="quizNr">Frage 1/5</span><span id="quizScore">0 richtig</span></div>
+          <h3 class="quiz__frage" id="quizFrage"></h3>
+          <div class="quiz__antworten" id="quizAntworten"></div>
+          <p class="quiz__feedback" id="quizFeedback"></p>
+        </div>
+
+        <div class="quiz__ergebnis" id="quizErgebnis" hidden>
+          <div class="quiz__badge" id="quizBadge"></div>
+          <h3 id="quizErgTitel"></h3>
+          <p id="quizErgText"></p>
+          <div class="quiz__erg-cta">
+            <a href="#bewerben" class="btn btn--gelb" id="quizZurBewerbung">Jetzt bewerben</a>
+            <button class="btn btn--ghost btn--sm" id="quizNochmal">Nochmal</button>
+          </div>
+          <p class="quiz__hinweis">Kein Ausschlusskriterium – bei BRAUN entscheidet am Ende das persönliche Gespräch. Der Check zeigt dem Team nur, wo du stehst.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BEWERBEN -->
   <section class="section section--weiss" id="bewerben">
     <div class="shell">
@@ -1063,6 +1139,8 @@ img.logo__mark{ height:36px; background:#fff; padding:5px 9px; border-radius:9px
           <form id="demoForm" novalidate>
             <h3>Deine Blitz-Bewerbung</h3>
             <p>Für die Ausbildung Kaufmann/-frau im Einzelhandel · Start 2027.</p>
+            <div id="checkNudge" class="check-nudge"><span aria-hidden="true">🧮</span><span>Heb dich ab: mach vorher den <b>60-Sek-Azubi-Check</b> – <a href="#check">jetzt starten →</a></span></div>
+            <div id="checkBadge" class="check-badge" hidden></div>
             <div class="feld feld--reihe">
               <div>
                 <label for="fStandort">Wunsch-Standort</label>
@@ -1326,11 +1404,12 @@ document.getElementById("demoForm").addEventListener("submit", function(e){
   var form = e.target;
   if(!form.checkValidity()){ form.reportValidity(); return; }
   var standort = standortSelect.value || "deinem Wunsch-Standort";
+  var chk = window.azubiCheck ? '<br><br>🧮 Dein <strong>Azubi-Check (' + window.azubiCheck.score + '/' + window.azubiCheck.total + ')</strong> geht direkt mit ans Team.' : '';
   document.getElementById("formkarte").innerHTML =
     '<div class="form-erfolg">' +
       '<div class="haken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
       '<h3>Angekommen! 🎉</h3>' +
-      '<p>Deine Bewerbung ginge jetzt <strong>direkt an das Ausbildungsteam in ' + standort + '</strong>.<br>Innerhalb von 48 Stunden* bekommst du eine persönliche Rückmeldung.</p>' +
+      '<p>Deine Bewerbung ginge jetzt <strong>direkt an das Ausbildungsteam in ' + standort + '</strong>.<br>Innerhalb von 48 Stunden* bekommst du eine persönliche Rückmeldung.' + chk + '</p>' +
       '<span class="demo-hinweis">Demo · es wurden keine Daten übertragen</span>' +
     '</div>';
   konfetti();
@@ -1417,6 +1496,81 @@ function konfetti(){
     anim.onfinish = function(){ this.effect.target.remove(); };
   }
 }
+
+/* ============ Azubi-Check (Mini-Quiz mit Verkaufs-Rechnen) ============ */
+window.checkFertig = function(score, total){
+  window.azubiCheck = { score: score, total: total };
+  var badge = document.getElementById("checkBadge"), nudge = document.getElementById("checkNudge");
+  if(nudge) nudge.hidden = true;
+  if(badge){
+    badge.hidden = false;
+    badge.innerHTML = '<span>✅ Azubi-Check gemacht:</span> <b>' + score + '/' + total + ' richtig</b><span class="kx">' + score + '/' + total + '</span>';
+  }
+};
+(function(){
+  var FRAGEN = [
+    { f:"Ein Sofa kostet 800 €. Im Sale gibt’s 25 % Rabatt. Was zahlt die Kundin?", a:["600 €","750 €","575 €","200 €"], r:0, tipp:"25 % von 800 € sind 200 € Rabatt – bleiben 600 €." },
+    { f:"Der Einkauf kostet 47 €. Der Kunde gibt dir 50 €. Wie viel Rückgeld?", a:["3 €","7 €","13 €","5 €"], r:0, tipp:"50 € − 47 € = 3 €." },
+    { f:"3 gleiche Stühle kosten 210 €. Was kosten 5 davon?", a:["350 €","300 €","420 €","250 €"], r:0, tipp:"210 € ÷ 3 = 70 € pro Stuhl, × 5 = 350 €." },
+    { f:"Ein Schrank kostet 1.200 €. Der Kunde zahlt 10 % an. Wie hoch ist die Anzahlung?", a:["120 €","12 €","240 €","100 €"], r:0, tipp:"10 % von 1.200 € sind 120 €." },
+    { f:"Eine Kundin ist unsicher zwischen zwei Betten. Was tust du?", a:["Fragen stellen und ehrlich beraten","Einfach das teurere empfehlen","„Ist mir egal“ sagen","Wegschauen und warten"], r:0, tipp:"Guter Verkauf heißt zuhören – nicht aufschwatzen." }
+  ];
+  var start = document.getElementById("quizStart"), buehne = document.getElementById("quizBuehne"), erg = document.getElementById("quizErgebnis");
+  if(!start) return;
+  var i = 0, score = 0, total = FRAGEN.length, gesperrt = false;
+  var buchst = ["A","B","C","D"];
+  function misch(arr){ arr = arr.slice(); for(var k = arr.length - 1; k > 0; k--){ var j = Math.floor(Math.random() * (k + 1)); var t = arr[k]; arr[k] = arr[j]; arr[j] = t; } return arr; }
+  function zeige(){
+    var q = FRAGEN[i], richtigText = q.a[q.r];
+    document.getElementById("quizBar").style.width = (i / total * 100) + "%";
+    document.getElementById("quizNr").textContent = "Frage " + (i + 1) + "/" + total;
+    document.getElementById("quizScore").textContent = score + " richtig";
+    document.getElementById("quizFrage").textContent = q.f;
+    document.getElementById("quizFeedback").textContent = "";
+    var box = document.getElementById("quizAntworten");
+    box.innerHTML = "";
+    misch(q.a).forEach(function(text, idx){
+      var btn = document.createElement("button");
+      btn.setAttribute("data-buchstabe", buchst[idx]);
+      btn.appendChild(document.createTextNode(text));
+      btn.addEventListener("click", function(){
+        if(gesperrt) return;
+        gesperrt = true;
+        var korrekt = (text === richtigText);
+        if(korrekt) score++;
+        Array.prototype.forEach.call(box.children, function(b){
+          b.disabled = true;
+          if(b.lastChild && b.lastChild.nodeValue === richtigText) b.classList.add("richtig");
+        });
+        if(!korrekt) btn.classList.add("falsch");
+        document.getElementById("quizScore").textContent = score + " richtig";
+        document.getElementById("quizFeedback").innerHTML = (korrekt ? "<b>Richtig!</b> " : "<b>Knapp daneben.</b> ") + q.tipp;
+        setTimeout(function(){
+          i++;
+          gesperrt = false;
+          if(i < total) zeige(); else zeigeErgebnis();
+        }, 1250);
+      });
+      box.appendChild(btn);
+    });
+  }
+  function zeigeErgebnis(){
+    document.getElementById("quizBar").style.width = "100%";
+    buehne.hidden = true;
+    erg.hidden = false;
+    document.getElementById("quizBadge").textContent = score + "/" + total;
+    var t, x;
+    if(score >= 5){ t = "Chef-Niveau! 🏆"; x = "Wow – jede Frage geknackt. Im Verkauf würdest du sofort glänzen. Jetzt fehlt nur noch deine Bewerbung."; }
+    else if(score === 4){ t = "Stark – du bist BRAUN-Azubi-Material! 💪"; x = "Sehr gut gerechnet. Genau dieses Zahlengefühl brauchst du an Kasse und Beratung. Ab zur Bewerbung!"; }
+    else if(score === 3){ t = "Solide Basis 👍"; x = "Passt – den Rest bringen wir dir in der Ausbildung bei. Trau dich und bewirb dich."; }
+    else{ t = "Noch Luft nach oben – aber dafür sind wir ja da."; x = "Kopf hoch: In der Ausbildung wirst du fit gemacht. Wichtiger ist, dass du Bock hast. Also – bewirb dich trotzdem!"; }
+    document.getElementById("quizErgTitel").textContent = t;
+    document.getElementById("quizErgText").textContent = x;
+    window.checkFertig(score, total);
+  }
+  document.getElementById("quizGo").addEventListener("click", function(){ start.hidden = true; buehne.hidden = false; i = 0; score = 0; zeige(); });
+  document.getElementById("quizNochmal").addEventListener("click", function(){ erg.hidden = true; start.hidden = false; document.getElementById("quizBar").style.width = "0"; });
+})();
 </script>
 </body>
 </html>

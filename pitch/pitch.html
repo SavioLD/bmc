@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Azubi-Offensive 2027 · BRAUN Möbel-Center × LändleDigital</title>
+<style>
+/* ============================================================
+   PITCH-DECK (3 Seiten · A4 quer) · LändleDigital-CI
+   Rendern: Chromium → PDF (printBackground, preferCSSPageSize)
+   ============================================================ */
+@font-face { font-family:"Archivo Black"; font-weight:400; src:url("../assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Bricolage Grotesque"; font-weight:500; src:url("../assets/fonts/bricolage-grotesque-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Bricolage Grotesque"; font-weight:600; src:url("../assets/fonts/bricolage-grotesque-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Bricolage Grotesque"; font-weight:700; src:url("../assets/fonts/bricolage-grotesque-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"Bricolage Grotesque"; font-weight:800; src:url("../assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family:"DM Sans"; font-weight:400; src:url("../assets/fonts/dm-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"DM Sans"; font-weight:500; src:url("../assets/fonts/dm-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"DM Sans"; font-weight:700; src:url("../assets/fonts/dm-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"Caveat"; font-weight:500; src:url("../assets/fonts/caveat-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Caveat"; font-weight:700; src:url("../assets/fonts/caveat-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"JetBrains Mono"; font-weight:500; src:url("../assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+
+:root{
+  --gelb:#FFDE59; --gelb-tief:#F5C518; --gelb-soft:#FFF1B8;
+  --ink:#111111; --ink-soft:#2B2B2B; --mute:#6E6A60;
+  --linie:#E7E2D6; --papier:#F6F2E7; --papier-2:#FFFCF4; --weiss:#fff;
+  --braun-rot:#E2001A;
+  --pop:0 6px 0 #111111; --pop-sm:0 4px 0 #111111;
+  --f-display:"Archivo Black", sans-serif;
+  --f-head:"Bricolage Grotesque", sans-serif;
+  --f-body:"DM Sans", sans-serif;
+  --f-hand:"Caveat", cursive;
+  --f-mono:"JetBrains Mono", monospace;
+}
+
+@page{ size:A4 landscape; margin:0; }
+*{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ margin:0; padding:0; }
+body{ font-family:var(--f-body); color:var(--ink); background:#DDD8CB; }
+img{ display:block; }
+
+.page{
+  width:297mm; height:210mm; position:relative; overflow:hidden;
+  background:var(--papier); page-break-after:always; break-after:page;
+  padding:13mm 15mm 12mm;
+  background-image:radial-gradient(700px 380px at 96% -6%, rgba(255,222,89,.22), transparent 62%);
+}
+.page:last-child{ page-break-after:auto; break-after:auto; }
+
+/* ---- Bausteine ---- */
+.mono{ font-family:var(--f-mono); font-size:7.6pt; letter-spacing:.14em; text-transform:uppercase; color:var(--mute); }
+.eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:var(--f-head); font-weight:700; font-size:9.5pt; letter-spacing:.1em; text-transform:uppercase; }
+.eyebrow .dash{ width:22px; height:3px; background:var(--ink); }
+.hl{ position:relative; display:inline-block; z-index:0; white-space:nowrap; }
+.hl::before{ content:""; position:absolute; inset:auto -5px 4px -5px; height:.4em; background:var(--gelb); z-index:-1; }
+.scribble{ font-family:var(--f-hand); font-weight:700; font-size:16pt; transform:rotate(-2deg); display:inline-block; }
+.karte{
+  background:var(--weiss); border:2px solid var(--ink); border-radius:14px;
+  box-shadow:var(--pop); padding:6mm;
+}
+.chip{
+  display:inline-flex; align-items:center; gap:5px; border:1.5px solid var(--ink); border-radius:999px;
+  background:var(--weiss); padding:2.2mm 4mm; font-weight:700; font-size:9pt; font-family:var(--f-head);
+  box-shadow:var(--pop-sm); white-space:nowrap;
+}
+.chip--gelb{ background:var(--gelb); }
+.chip--rot{ background:var(--braun-rot); color:#fff; }
+.fuss{
+  position:absolute; left:15mm; right:15mm; bottom:7mm; display:flex; justify-content:space-between;
+  align-items:center; border-top:1.5px solid var(--linie); padding-top:3mm;
+}
+.seitenzahl{ font-family:var(--f-mono); font-size:7.5pt; color:var(--mute); letter-spacing:.12em; }
+
+/* ============ SEITE 1 · COVER ============ */
+.cover__kopf{ display:flex; justify-content:space-between; align-items:flex-start; }
+.cover__logo{ height:17mm; }
+.cover__mitte{ margin-top:19mm; max-width:225mm; }
+.cover h1{
+  font-family:var(--f-display); font-size:47pt; line-height:.99; letter-spacing:-.015em; margin:6mm 0 0;
+}
+.cover__lead{ font-size:13.5pt; color:var(--ink-soft); line-height:1.5; margin:7mm 0 0; max-width:180mm; }
+.cover__lead b{ font-weight:700; }
+.cover__scribble{ margin-top:6mm; }
+.cover__chips{ display:flex; gap:5mm; margin-top:11mm; }
+.cover__partner{
+  position:absolute; right:15mm; top:64mm; transform:rotate(2deg);
+  background:var(--weiss); border:2px solid var(--ink); border-radius:12px; box-shadow:var(--pop);
+  padding:5mm 7mm; text-align:center;
+}
+.cover__partner .mono{ display:block; margin-bottom:2.5mm; }
+.cover__partner .braunlogo{ display:inline-flex; align-items:center; gap:3mm; }
+.braunlogo__box{ background:var(--braun-rot); color:#fff; font-family:var(--f-display); font-size:15pt; padding:2.6mm 3.6mm 2.2mm; border-radius:2.5mm; letter-spacing:.02em; }
+.braunlogo__text{ text-align:left; line-height:1.12; }
+.braunlogo__text b{ font-family:var(--f-head); font-weight:800; font-size:10pt; letter-spacing:.14em; text-transform:uppercase; display:block; }
+.braunlogo__text span{ font-size:7.5pt; color:var(--mute); }
+
+/* ============ SEITE 2 · STRATEGIE ============ */
+.s2__kopf h2, .s3__kopf h2{
+  font-family:var(--f-display); font-size:24pt; letter-spacing:-.01em; margin:3.5mm 0 2mm; line-height:1.02;
+}
+.s2__kopf p{ margin:0; color:var(--ink-soft); font-size:10.5pt; max-width:150mm; }
+.s2__grid{ display:grid; grid-template-columns:118mm 1fr; gap:9mm; margin-top:7mm; align-items:start; }
+
+.punkt{ display:flex; gap:4mm; margin-bottom:4.6mm; }
+.punkt__nr{
+  width:8.6mm; height:8.6mm; flex:none; border-radius:50%; background:var(--gelb); border:2px solid var(--ink);
+  box-shadow:var(--pop-sm); display:grid; place-items:center; font-family:var(--f-display); font-size:10.5pt;
+}
+.punkt h3{ font-family:var(--f-head); font-weight:800; font-size:11.5pt; margin:0 0 1mm; line-height:1.15; }
+.punkt p{ margin:0; font-size:9.3pt; color:var(--ink-soft); line-height:1.42; }
+.punkt p b{ font-weight:700; color:var(--ink); }
+
+/* Funnel */
+.funnel{ display:flex; flex-direction:column; align-items:center; gap:2.5mm; }
+.funnel__kanaele{ display:flex; flex-wrap:wrap; gap:2.6mm; justify-content:center; max-width:135mm; }
+.funnel__kanaele .chip{ font-size:8pt; padding:1.8mm 3.2mm; box-shadow:var(--pop-sm); }
+.funnel__pfeil{ font-family:var(--f-display); font-size:13pt; line-height:1; }
+.funnel__portal{
+  display:flex; align-items:center; gap:5mm; background:var(--weiss); border:2px solid var(--ink);
+  border-radius:14px; box-shadow:var(--pop); padding:4mm 5mm;
+}
+.funnel__portal img{ width:31mm; border-radius:3mm; border:1.5px solid var(--linie); }
+.funnel__portal .info{ max-width:52mm; }
+.funnel__portal .info .mono{ color:var(--braun-rot); }
+.funnel__portal .info h3{ font-family:var(--f-head); font-weight:800; font-size:11.5pt; margin:1.5mm 0; line-height:1.15; }
+.funnel__portal .info p{ margin:0; font-size:8.4pt; color:var(--ink-soft); line-height:1.4; }
+.funnel__orte{ display:flex; flex-wrap:wrap; gap:2mm; justify-content:center; max-width:135mm; }
+.funnel__orte span{
+  font-family:var(--f-mono); font-size:7pt; letter-spacing:.06em; background:var(--weiss);
+  border:1.5px solid var(--ink); border-radius:2.4mm; padding:1.5mm 2.6mm;
+}
+.funnel__label{ font-size:8.4pt; color:var(--mute); }
+
+.s2__kpi{
+  display:flex; gap:5mm; margin-top:6mm; align-items:stretch;
+}
+.kpi{
+  flex:1; background:var(--weiss); border:2px solid var(--ink); border-radius:12px; box-shadow:var(--pop-sm);
+  padding:3.6mm 5mm; display:flex; flex-direction:column; justify-content:center;
+}
+.kpi b{ font-family:var(--f-display); font-size:13.5pt; }
+.kpi span{ font-size:8.4pt; color:var(--mute); margin-top:.8mm; }
+.kpi--gelb{ background:var(--gelb); }
+.kpi--gelb span{ color:var(--ink-soft); }
+
+/* ============ SEITE 3 · PORTAL & FAHRPLAN ============ */
+.s3__grid{ display:grid; grid-template-columns:136mm 1fr; gap:10mm; margin-top:6mm; align-items:start; }
+.browser{ background:var(--weiss); border:2px solid var(--ink); border-radius:12px; box-shadow:var(--pop); overflow:hidden; }
+.browser__leiste{ display:flex; align-items:center; gap:2mm; background:var(--papier-2); border-bottom:2px solid var(--ink); padding:2.6mm 4mm; }
+.browser__leiste i{ width:2.8mm; height:2.8mm; border-radius:50%; background:var(--linie); border:1px solid var(--ink); }
+.browser__url{
+  margin-left:3mm; flex:1; font-family:var(--f-mono); font-size:7.5pt; letter-spacing:.05em;
+  background:var(--weiss); border:1.5px solid var(--linie); border-radius:999px; padding:1.4mm 4mm; color:var(--ink-soft);
+}
+.browser img{ width:100%; }
+.browser__caption{ margin-top:3.5mm; display:flex; align-items:center; justify-content:space-between; }
+.check{ display:flex; gap:2.6mm; margin-bottom:3.1mm; align-items:flex-start; }
+.check i{
+  width:5.4mm; height:5.4mm; flex:none; border-radius:1.8mm; background:var(--gelb); border:1.8px solid var(--ink);
+  display:grid; place-items:center; font-style:normal; font-weight:800; font-size:8pt; margin-top:.4mm;
+}
+.check p{ margin:0; font-size:9.2pt; line-height:1.38; color:var(--ink-soft); }
+.check p b{ color:var(--ink); font-weight:700; }
+.fahrplan{ margin-top:5mm; }
+.fahrplan h3, .s3__rechts h3{
+  font-family:var(--f-head); font-weight:800; font-size:12pt; margin:0 0 3mm;
+}
+.etappe{ display:flex; gap:3.4mm; align-items:baseline; margin-bottom:2.1mm; }
+.etappe .mono{ color:var(--ink); background:var(--gelb-soft); border:1.2px solid var(--ink); border-radius:2mm; padding:.8mm 2.2mm; font-size:6.8pt; flex:none; width:21mm; text-align:center; }
+.etappe p{ margin:0; font-size:8.8pt; color:var(--ink-soft); }
+.etappe p b{ color:var(--ink); }
+.kontakt{
+  margin-top:5mm; background:var(--ink); color:var(--papier); border-radius:12px; padding:4.5mm 5.5mm;
+  display:flex; align-items:center; gap:5mm; box-shadow:var(--pop-sm);
+}
+.kontakt img{ height:9mm; }
+.kontakt p{ margin:0; font-size:8.6pt; line-height:1.5; color:rgba(246,242,231,.85); }
+.kontakt b{ color:#fff; font-size:9.5pt; }
+.kontakt .gelb{ color:var(--gelb); font-weight:700; }
+</style>
+</head>
+<body>
+
+<!-- ================= SEITE 1 · COVER ================= -->
+<section class="page cover">
+  <div class="cover__kopf">
+    <img class="cover__logo" src="../assets/img/logo.png" alt="LändleDigital GmbH" />
+    <span class="mono">Konzept · 13. Juli 2026 · vertraulich</span>
+  </div>
+
+  <div class="cover__mitte">
+    <span class="eyebrow"><span class="dash"></span> Einstellungspartner-Konzept für BRAUN Möbel-Center</span>
+    <h1>Die <span class="hl">Azubi-Offensive</span><br />2027.</h1>
+    <p class="cover__lead">
+      <b>30–40 Ausbildungsplätze. Ein Portal. Eine Kampagne.</b><br />
+      Wie BRAUN Möbel-Center zur ersten Adresse für Azubis im Südwesten wird –
+      messbar, planbar und in echtem BRAUN-Look.
+    </p>
+    <span class="scribble cover__scribble">Für unser Gespräch heute – freu mich drauf! ✌️</span>
+  </div>
+
+  <div class="cover__partner">
+    <span class="mono">vorbereitet für</span>
+    <span class="braunlogo">
+      <span class="braunlogo__box">BRAUN</span>
+      <span class="braunlogo__text"><b>Möbel-Center</b><span>10 Standorte im Südwesten</span></span>
+    </span>
+  </div>
+
+  <div class="cover__chips">
+    <span class="chip chip--gelb">Ausbildungsstart 01.09.2027</span>
+    <span class="chip">Zielgruppe 14–20 Jahre</span>
+    <span class="chip">9 Häuser + Zentrale</span>
+    <span class="chip chip--rot">Portal in BRAUN-CI inklusive</span>
+  </div>
+
+  <div class="fuss">
+    <span class="mono">LändleDigital GmbH · Ihr Einstellungspartner · laendle-digital.com</span>
+    <span class="seitenzahl">01 / 03</span>
+  </div>
+</section>
+
+<!-- ================= SEITE 2 · STRATEGIE ================= -->
+<section class="page s2">
+  <div class="s2__kopf">
+    <span class="eyebrow"><span class="dash"></span> Das Prinzip</span>
+    <h2>Alle Wege führen ins <span class="hl">Azubi-Portal</span>.</h2>
+    <p>Statt 10 einzelner Stellenanzeigen: eine zentrale Plattform, auf der jede Kampagne landet – und die Bewerbungen automatisch an die Standorte verteilt.</p>
+  </div>
+
+  <div class="s2__grid">
+    <div>
+      <div class="punkt">
+        <span class="punkt__nr">1</span>
+        <div>
+          <h3>Ads, wo die Zielgruppe wirklich ist</h3>
+          <p><b>TikTok, Instagram, YouTube Shorts, Snapchat &amp; Google</b> – pro Beruf und Region eigene Creatives (Azubi-Gesichter statt Stockfotos), dazu Schul-Kooperationen mit QR-Code.</p>
+        </div>
+      </div>
+      <div class="punkt">
+        <span class="punkt__nr">2</span>
+        <div>
+          <h3>Ein Klick – und alles an einem Ort</h3>
+          <p>Jede Anzeige führt auf <b>azubis.braun-moebel.de</b>: alle Berufe, Rahmendaten &amp; Vergütung, Probewoche, FAQ – mobil-first und im 100&nbsp;% BRAUN-Look.</p>
+        </div>
+      </div>
+      <div class="punkt">
+        <span class="punkt__nr">3</span>
+        <div>
+          <h3>Das Portal verteilt an die Standorte</h3>
+          <p><b>Standort-Routing:</b> Jede Bewerbung landet direkt beim Ausbildungsteam des Wunsch-Hauses. 60-Sekunden-Bewerbung ohne Anschreiben, auf Wunsch per WhatsApp – Antwort in 48&nbsp;h.</p>
+        </div>
+      </div>
+      <div class="punkt" style="margin-bottom:0">
+        <span class="punkt__nr">4</span>
+        <div>
+          <h3>Messbar statt Bauchgefühl</h3>
+          <p>Tracking pro Kanal, Beruf &amp; Standort. <b>Monatliches Reporting</b>, A/B-Tests der Creatives, Budget fließt dorthin, wo Bewerbungen entstehen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="funnel">
+      <div class="funnel__kanaele">
+        <span class="chip">TikTok</span><span class="chip">Instagram</span><span class="chip">YouTube Shorts</span>
+        <span class="chip">Google</span><span class="chip">Snapchat</span><span class="chip">Schulen&nbsp;+&nbsp;QR</span>
+      </div>
+      <span class="funnel__pfeil">↓</span>
+      <div class="funnel__portal">
+        <img src="img/portal-mobil.png" alt="Azubi-Portal auf dem Smartphone" />
+        <div class="info">
+          <span class="mono">azubis.braun-moebel.de</span>
+          <h3>Das Azubi-Portal</h3>
+          <p>Berufe · Rahmendaten · Probewoche · Standorte · 60-Sek-Bewerbung · WhatsApp</p>
+        </div>
+      </div>
+      <span class="funnel__pfeil">↓</span>
+      <div class="funnel__orte">
+        <span>REUTLINGEN</span><span>FREIBURG</span><span>OFFENBURG</span><span>SINGEN</span><span>KONSTANZ</span>
+        <span>BAD DÜRRHEIM</span><span>BAD SAULGAU</span><span>FREUDENSTADT</span><span>HOMBURG</span><span>ZENTRALE</span>
+      </div>
+      <span class="funnel__label">Bewerbungen fließen direkt an die 10 Standorte – ohne Umweg über Sammel-Postfächer.</span>
+    </div>
+  </div>
+
+  <div class="s2__kpi">
+    <div class="kpi kpi--gelb"><b>30–40</b><span>unterschriebene Ausbildungsverträge zum 01.09.2027 – das Ziel, an dem wir uns messen lassen</span></div>
+    <div class="kpi"><b>500+</b><span>qualifizierte Bewerbungen über das Portal*</span></div>
+    <div class="kpi"><b>48 h</b><span>bis zur persönlichen Rückmeldung an jeden Bewerber</span></div>
+    <div class="kpi"><b>100 %</b><span>Transparenz: Report pro Kanal, Beruf &amp; Standort</span></div>
+  </div>
+
+  <div class="fuss">
+    <span class="mono">* Richtwert – final gemeinsam im Kickoff festgelegt</span>
+    <span class="seitenzahl">02 / 03</span>
+  </div>
+</section>
+
+<!-- ================= SEITE 3 · PORTAL & FAHRPLAN ================= -->
+<section class="page s3">
+  <div class="s3__kopf">
+    <span class="eyebrow"><span class="dash"></span> Der Prototyp ist schon klickbar</span>
+    <h2>Das Azubi-Portal in <span class="hl">BRAUN-CI</span> – live.</h2>
+  </div>
+
+  <div class="s3__grid">
+    <div>
+      <div class="browser">
+        <div class="browser__leiste">
+          <i></i><i></i><i></i>
+          <span class="browser__url">azubis.braun-moebel.de&nbsp;&nbsp;·&nbsp;&nbsp;Prototyp</span>
+        </div>
+        <img src="img/portal-desktop.png" alt="Azubi-Portal Desktop-Ansicht" />
+      </div>
+      <div class="browser__caption">
+        <span class="scribble" style="font-size:13.5pt">Klicken wir gleich gemeinsam durch!</span>
+        <span class="chip chip--gelb" style="font-size:8pt">Demo heute live</span>
+      </div>
+    </div>
+
+    <div class="s3__rechts">
+      <h3>Was das Portal kann</h3>
+      <div class="check"><i>✓</i><p><b>Ein Ziel für alle Ads</b> – jede Kampagne landet punktgenau auf der passenden Sektion (Beruf, Standort, Probewoche).</p></div>
+      <div class="check"><i>✓</i><p><b>Alles an einem Ort:</b> Berufe, Vergütung &amp; Rahmendaten, Probewoche/Praktikum, FAQ – Eltern-tauglich und Gen-Z-schnell.</p></div>
+      <div class="check"><i>✓</i><p><b>Standort-Routing:</b> Bewerbungen gehen direkt ans richtige Haus – alle 9 Häuser + Zentrale sind angebunden.</p></div>
+      <div class="check"><i>✓</i><p><b>60-Sekunden-Bewerbung</b> ohne Anschreiben + WhatsApp-Option – mobil-first für die Zielgruppe.</p></div>
+      <div class="check" style="margin-bottom:0"><i>✓</i><p><b>Voll messbar:</b> jede Anzeige, jeder Klick, jede Bewerbung – sauber getrackt.</p></div>
+
+      <div class="fahrplan">
+        <h3>Der Fahrplan bis zum Start</h3>
+        <div class="etappe"><span class="mono">07/2026</span><p><b>Kickoff:</b> CI-Freigabe, Fotos/Videodreh mit echten Azubis, Zahlen final</p></div>
+        <div class="etappe"><span class="mono">08/2026</span><p><b>Portal-Umsetzung</b> + Tracking, Domain azubis.braun-moebel.de</p></div>
+        <div class="etappe"><span class="mono">09/2026</span><p><b>Livegang &amp; Ads-Start</b> – pünktlich zur Bewerbungssaison 2027</p></div>
+        <div class="etappe"><span class="mono">bis 06/27</span><p><b>Always-on-Kampagne,</b> monatliches Reporting &amp; Optimierung</p></div>
+        <div class="etappe"><span class="mono">01.09.27</span><p><b>30–40 neue Azubis</b> starten bei BRAUN 🎉</p></div>
+      </div>
+
+      <div class="kontakt">
+        <img src="../assets/img/logo-light.png" alt="LändleDigital" />
+        <p>
+          <b>Savio Röckle</b> · Geschäftsführer<br />
+          <span class="gelb">info@laendle-digital.com</span> · 0151&nbsp;10188436<br />
+          LändleDigital GmbH · Königstraße 26 · 78628 Rottweil
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fuss">
+    <span class="mono">LändleDigital GmbH · Azubi-Offensive 2027 für BRAUN Möbel-Center</span>
+    <span class="seitenzahl">03 / 03</span>
+  </div>
+</section>
+
+</body>
+</html>

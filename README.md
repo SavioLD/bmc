@@ -23,8 +23,8 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 
 ## Platzhalter (vor Kampagnenstart ersetzen)
 
-- **Logo & Gelb-Ton:** CI-Nachbau. Zentral tauschbar über die CSS-Tokens oben in `index.html` (`--gelb`, `--ink`) und die `logo__mark`-SVGs → gegen echte Logo-Datei tauschen.
-- **Fotos:** beige Platzhalter-Flächen (mit „Platzhalter“-Tag) → echte Azubi-Fotos/Videos.
+- **Logo:** ✅ Original liegt als `assets/img/braun-logo.png` im Repo und wird automatisch eingesetzt (Auto-Detect in `index.html`; SVG-Nachbau bleibt als Fallback). Gelb-Ton zentral über CSS-Token `--gelb`.
+- **Bilder:** aktuell selbst erstellte Illustrationen im BRAUN-Look (SVG-Sprite oben in `index.html`) → später durch echte Azubi-Fotos/Videos ersetzen oder ergänzen.
 - **Alle Werte mit `*`:** Vergütung, 48-h-Versprechen, Zuordnung welcher Standort 1–2 bzw. 4–6 Plätze hat → mit BRAUN final abstimmen.
 - **Daten pflegen:** Standorte & Berufe liegen als JS-Arrays (`STANDORTE`, `BERUFE`) unten in `index.html`.
 

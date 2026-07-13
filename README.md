@@ -7,7 +7,7 @@ Konzept-Paket von **LändleDigital** für das Erstgespräch am 13.07.2026:
 | 🛋️ **Azubi-Portal** (klickbarer Prototyp in BRAUN-CI) | [`index.html`](index.html) |
 | 📱 **Werbe-Creatives** (6 Social-Ads, fertige PNGs) | [`creatives/out/`](creatives/out) |
 | 🖼️ Creative-Übersicht (alle 6 auf einen Blick) | [`creatives/creatives-uebersicht.png`](creatives/creatives-uebersicht.png) |
-| 🗂️ **Creatives 4:5 als ZIP** (5 Stück, 1080×1350) | [`creatives/BRAUN-Azubi-Creatives-4x5.zip`](creatives/BRAUN-Azubi-Creatives-4x5.zip) |
+| 🗂️ **Creatives 4:5 als ZIP** (8 Stück, 1080×1350: 5 Collage + 3 Hero) | [`creatives/BRAUN-Azubi-Creatives-4x5.zip`](creatives/BRAUN-Azubi-Creatives-4x5.zip) |
 | 📄 **Pitch-PDF** (3 Seiten, LändleDigital-CI) | [`pitch/Azubi-Offensive-2027_BRAUN_x_LaendleDigital.pdf`](pitch/Azubi-Offensive-2027_BRAUN_x_LaendleDigital.pdf) |
 | 🖨️ Druckvorlage des Pitchs (HTML → PDF) | [`pitch/pitch.html`](pitch/pitch.html) |
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>BRAUN Azubi-Creatives · Hero „Zukunft“</title>
+<style>
+/* Hero-Creatives (1080×1350) · Base 540×675 @2x · Portal-Hero als Ad
+   „Richte dir deine Zukunft ein." + 2027-Wasserzeichen + Dringlichkeits-Chip */
+@font-face { font-family:"Archivo Black"; font-weight:400; font-display:swap; src:url("../assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:600; font-display:swap; src:url("../assets/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:700; font-display:swap; src:url("../assets/fonts/poppins-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family:"Poppins"; font-weight:800; font-display:swap; src:url("../assets/fonts/poppins-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:400; font-display:swap; src:url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:500; font-display:swap; src:url("../assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-weight:600; font-display:swap; src:url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+:root{ --gelb:#FFE500; --ink:#161510; --creme:#FBFAF5;
+  --f-logo:"Archivo Black",sans-serif; --f-head:"Poppins",sans-serif; --f-body:"Inter",sans-serif; }
+*{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; padding:0; line-height:1.05; }
+body{ font-family:var(--f-body); background:#26251F; padding:36px; display:flex; flex-wrap:wrap; gap:34px; }
+
+.hero{ width:540px; height:675px; position:relative; overflow:hidden; border-radius:18px; flex:none; display:flex; flex-direction:column; padding:36px 34px; }
+.hero.korn::after{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.05; mix-blend-mode:multiply; z-index:4;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.hero > *{ position:relative; z-index:1; }
+
+/* Wasserzeichen 2027 */
+.wm{ position:absolute; z-index:0; top:104px; left:50%; transform:translateX(-50%); font-family:var(--f-logo); font-size:250px; letter-spacing:-.02em; line-height:1; white-space:nowrap; color:transparent; user-select:none; }
+
+/* Kopf */
+.top{ display:flex; justify-content:space-between; align-items:flex-start; }
+.logo{ height:38px; display:block; }
+.logo-chip{ background:#fff; padding:7px 12px; border-radius:11px; display:inline-block; box-shadow:0 3px 0 rgba(22,21,16,.25); }
+.logo-chip img{ height:29px; display:block; }
+
+/* Mitte */
+.mid{ margin:auto 0; }
+.chip{ display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:9px 18px; font-size:13.5px; font-weight:600; margin-bottom:22px; }
+.chip .dot{ width:9px; height:9px; border-radius:50%; background:var(--gelb); flex:none; box-shadow:0 0 0 4px rgba(255,229,0,.22); }
+.hl2{ font-family:var(--f-logo); font-size:56px; letter-spacing:-.02em; line-height:1.03; }
+.hl2 .hl{ padding:.01em .09em; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.sub{ font-family:var(--f-head); font-weight:600; font-size:15.5px; margin-top:18px; }
+
+/* Fuß */
+.foot{ display:flex; align-items:center; justify-content:space-between; }
+.cta{ display:inline-flex; align-items:center; gap:9px; font-family:var(--f-head); font-weight:800; font-size:19px; border-radius:14px; padding:15px 24px; }
+.url{ font-family:var(--f-head); font-weight:700; font-size:14px; line-height:1.15; }
+
+/* ===== Variante CREAM ===== */
+.v-cream{ background:var(--creme); color:var(--ink); }
+.v-cream .wm{ -webkit-text-stroke:2px rgba(22,21,16,.09); }
+.v-cream .chip{ background:var(--ink); color:#fff; }
+.v-cream .hl2{ color:var(--ink); }
+.v-cream .hl2 .hl{ background:var(--gelb); color:var(--ink); }
+.v-cream .sub{ color:#5E5B52; }
+.v-cream .cta{ background:var(--ink); color:#fff; }
+.v-cream .url{ color:var(--ink); }
+
+/* ===== Variante GELB ===== */
+.v-gelb{ background:var(--gelb); color:var(--ink); }
+.v-gelb .wm{ -webkit-text-stroke:2px rgba(22,21,16,.13); }
+.v-gelb .chip{ background:var(--ink); color:#fff; }
+.v-gelb .hl2{ color:var(--ink); }
+.v-gelb .hl2 .hl{ background:var(--ink); color:var(--gelb); }
+.v-gelb .sub{ color:rgba(22,21,16,.7); }
+.v-gelb .cta{ background:var(--ink); color:#fff; }
+.v-gelb .url{ color:var(--ink); }
+
+/* ===== Variante DARK ===== */
+.v-dark{ background:var(--ink); color:#fff; }
+.v-dark .wm{ -webkit-text-stroke:2px rgba(255,255,255,.08); }
+.v-dark .chip{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); color:#fff; }
+.v-dark .hl2{ color:#fff; }
+.v-dark .hl2 .hl{ background:var(--gelb); color:var(--ink); }
+.v-dark .sub{ color:rgba(255,255,255,.66); }
+.v-dark .cta{ background:var(--gelb); color:var(--ink); border:2px solid var(--gelb); }
+.v-dark .url{ color:#fff; }
+</style>
+</head>
+<body>
+
+<!-- HERO · CREAM (faithful zum Portal) -->
+<div class="hero v-cream korn" id="h1">
+  <div class="wm" aria-hidden="true">2027</div>
+  <div class="top"><img class="logo" src="../assets/img/braun-logo.png" alt="BRAUN" /></div>
+  <div class="mid">
+    <span class="chip"><span class="dot"></span> 2026 ist fast voll – jetzt Platz für 2027 sichern</span>
+    <div class="hl2">Richte dir deine <span class="hl">Zukunft</span> ein.</div>
+    <p class="sub">Ausbildung Kaufmann/-frau im Einzelhandel · Start 09/2027</p>
+  </div>
+  <div class="foot"><span class="cta">Jetzt bewerben →</span><span class="url">azubis.<br/>braun-moebel.de</span></div>
+</div>
+
+<!-- HERO · GELB -->
+<div class="hero v-gelb korn" id="h2">
+  <div class="wm" aria-hidden="true">2027</div>
+  <div class="top"><img class="logo" src="../assets/img/braun-logo.png" alt="BRAUN" /></div>
+  <div class="mid">
+    <span class="chip"><span class="dot"></span> 2026 ist fast voll – jetzt Platz für 2027 sichern</span>
+    <div class="hl2">Richte dir deine <span class="hl">Zukunft</span> ein.</div>
+    <p class="sub">Ausbildung Einzelhandel · 9 Standorte im Südwesten · ohne Anschreiben</p>
+  </div>
+  <div class="foot"><span class="cta">Jetzt bewerben →</span><span class="url">azubis.<br/>braun-moebel.de</span></div>
+</div>
+
+<!-- HERO · DARK -->
+<div class="hero v-dark korn" id="h3">
+  <div class="wm" aria-hidden="true">2027</div>
+  <div class="top"><span class="logo-chip"><img src="../assets/img/braun-logo.png" alt="BRAUN" /></span></div>
+  <div class="mid">
+    <span class="chip"><span class="dot"></span> 2026 ist fast voll – jetzt Platz für 2027 sichern</span>
+    <div class="hl2">Richte dir deine <span class="hl">Zukunft</span> ein.</div>
+    <p class="sub">Deine Ausbildung im Einzelhandel · Start 1. September 2027</p>
+  </div>
+  <div class="foot"><span class="cta">Jetzt bewerben →</span><span class="url">azubis.<br/>braun-moebel.de</span></div>
+</div>
+
+</body>
+</html>
